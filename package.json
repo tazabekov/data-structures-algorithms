@@ -1,0 +1,23 @@
+{
+  "name": "data-structures-algorithms",
+  "version": "1.0.0",
+  "description": "Data Structures & Algorithms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tazabekov/data-structures-algorithms.git"
+  },
+  "author": "Gizzat Tazabekov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tazabekov/data-structures-algorithms/issues"
+  },
+  "homepage": "https://github.com/tazabekov/data-structures-algorithms#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.3",
+    "express": "^4.16.2"
+  }
+}
