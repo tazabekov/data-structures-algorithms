@@ -34,6 +34,24 @@ export default class BSTree {
         }
     }
 
+    inOrderTraverse (fn){
+        if (this.left) this.left.inOrderTraverse(fn);
+        fn(this.value);
+        if (this.right) this.right.inOrderTraverse(fn);
+    }
+
+    preOrderTraverse (fn){
+        fn(this.value);
+        if (this.left) this.left.preOrderTraverse(fn);
+        if (this.right) this.right.preOrderTraverse(fn);
+    }
+
+    postOrderTraverse (fn){
+        if (this.left) this.left.postOrderTraverse(fn);
+        if (this.right) this.right.postOrderTraverse(fn);
+        fn(this.value);
+    }
+
     show() {
         console.log(this.value);
         if(this.left) {

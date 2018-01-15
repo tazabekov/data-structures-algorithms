@@ -14,4 +14,4 @@ bst.insert(3);
 
 //bst.show();
 
-console.log(bst.contains(3));
+bst.postOrderTraverse(console.log);
