@@ -32,8 +32,6 @@ export default class LinkedList {
                 }
             }
         }
-
-
     }
 
     show(){
