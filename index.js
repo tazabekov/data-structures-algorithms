@@ -6,11 +6,12 @@ import BSTree from "./classes-es6/BSTree.js";
 
 
 var bst = new BSTree(10);
-bst.show();
+
 bst.insert(5);
 bst.insert(12);
 bst.insert(7);
 bst.insert(3);
 
+//bst.show();
 
-bst.show();
+console.log(bst.contains(3));

@@ -20,6 +20,18 @@ BSTree.prototype.insert = function (value) {
     }
 };
 
+BSTree.prototype.contains = function(value) {
+    if (this.value === value) {
+        return true;
+    } else if (value < this.value && this.left) {
+        return this.left.contains(value);
+    } else if (value >= this.value && this.right) {
+        return this.right.contains(value);
+    } else {
+        return false;
+    }
+};
+
 BSTree.prototype.show = function() {
     console.log(this.value);
     if(this.left) {

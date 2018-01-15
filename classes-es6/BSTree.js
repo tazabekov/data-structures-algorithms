@@ -6,7 +6,7 @@ export default class BSTree {
     }
 
     insert (value) {
-        console.log("inserting", value);
+        //console.log("inserting", value);
         if (value < this.value) {
             if (this.left) {
                 this.left.insert(value);
@@ -19,6 +19,18 @@ export default class BSTree {
             } else {
                 this.right = new BSTree(value);
             }
+        }
+    }
+
+    contains (value) {
+        if (this.value === value) {
+            return true;
+        } else if (value < this.value && this.left) {
+            return this.left.contains(value);
+        } else if (value >= this.value && this.right) {
+            return this.right.contains(value);
+        } else {
+            return false;
         }
     }
 
