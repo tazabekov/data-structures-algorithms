@@ -11,7 +11,11 @@ bst.insert(5);
 bst.insert(12);
 bst.insert(7);
 bst.insert(3);
+bst.insert(4);
 
-//bst.show();
+bst.show();
 
-bst.postOrderTraverse(console.log);
+bst.deleteMin();
+
+bst.show();
+

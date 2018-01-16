@@ -34,6 +34,25 @@ export default class BSTree {
         }
     }
 
+    deleteMin(){
+        var parent = this;
+        var node = parent.left;
+
+        if (!node) return;
+        else {
+            while (node.left) {
+                parent = node;
+                node = node.left;
+            }
+
+            if (node.right) {
+                parent.left = node.right;
+            } else {
+                parent.left = null;
+            }
+        }
+    }
+
     inOrderTraverse (fn){
         if (this.left) this.left.inOrderTraverse(fn);
         fn(this.value);
