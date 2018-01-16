@@ -34,21 +34,30 @@ export default class BSTree {
         }
     }
 
-    deleteMin(){
-        var parent = this;
-        var node = parent.left;
+    deleteMin(p){
+        var parent = p ? p: this;
 
-        if (!node) return;
-        else {
-            while (node.left) {
-                parent = node;
-                node = node.left;
-            }
-
-            if (node.right) {
-                parent.left = node.right;
+        if (this.left) {
+            this.left.deleteMin(this);
+        } else {
+            if (this.right) {
+                parent.left = this.right;
             } else {
                 parent.left = null;
+            }
+        }
+    }
+
+    deleteMax(p){
+        var parent = p ? p: this;
+
+        if (this.right) {
+            this.right.deleteMax(this);
+        } else {
+            if (this.left) {
+                parent.right = this.left;
+            } else {
+                parent.right = null;
             }
         }
     }
