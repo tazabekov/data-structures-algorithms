@@ -5,21 +5,16 @@ import BSTree from "./classes-es6/BSTree.js";
 
 
 
-var bst = new BSTree(10);
+var bst = new BSTree(3);
 
 bst.insert(5);
-bst.insert(15);
+bst.insert(6);
 bst.insert(7);
-bst.insert(3);
-bst.insert(4);
-bst.insert(13);
-bst.insert(13);
-bst.insert(18);
-bst.insert(16);
+
 
 bst.show();
 
-bst.deleteMax();
+bst.deleteMin();
 
 bst.show();
 
