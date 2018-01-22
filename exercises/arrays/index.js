@@ -32,4 +32,19 @@ function flattenRec(input) {
     return result;
 }
 
+function flattenRec2(input, result) {
+    var result = result || [];
+
+    input.forEach((item) => {
+
+        if (Array.isArray(item)) {
+            result.concat(flatten(item, result));
+        } else {
+            result.push(item);
+        }
+    });
+
+    return result;
+}
+
 flatten(arr);
