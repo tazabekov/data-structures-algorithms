@@ -27,7 +27,7 @@ function flattenRec(input) {
         } else {
             result.push(item);
         }
-    })
+    });
 
     return result;
 }
