@@ -97,3 +97,18 @@ function recursiveReverse (arr) {
 //var initArr = [1,2,3,4];
 // console.log(recursiveReverse(initArr));
 // console.log(initArr);
+
+
+// sum items in array
+function sum(arr){
+    if (arr.length == 1) {
+        return arr[0];
+    } else {
+        return arr.pop() + sum(arr);
+    }
+}
+
+// sum([1,2,3,4,5]);
+
+
+// count number of items in a list
