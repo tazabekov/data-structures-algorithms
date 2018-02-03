@@ -23,9 +23,9 @@ function fib(n, hash) {
     //     hash[n] = fib(n-1, hash) + fib(n-2, hash);
     // }
     // return hash[n];
-    if(n <= 1){
+    if(n < 1){
         return 0;
-    } else if (n == 2){
+    } else if (n <= 2){
         return 1;
     } else {
         var tempArr = [0,1];
@@ -33,7 +33,7 @@ function fib(n, hash) {
             tempArr.push(tempArr[i-1] + tempArr[i-2]);
         }
         //console.log(tempArr);
-        return tempArr[n-1];
+        return tempArr[n];
     }
 
 }
