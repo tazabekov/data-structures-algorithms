@@ -9,20 +9,33 @@
 //   fib(4) === 3
 
 function fib(n, hash) {
-  hash = hash || {};
+    // hash = hash || {};
 
-  if(hash[n]){
-    return hash[n];
-  }
+    // if(hash[n]){
+    //     return hash[n];
+    // }
+    //
+    // if(n <= 0) {
+    //     hash[0] = 0;
+    // } else if(n === 1) {
+    //     hash[1] = 1;
+    // } else {
+    //     hash[n] = fib(n-1, hash) + fib(n-2, hash);
+    // }
+    // return hash[n];
+    if(n <= 1){
+        return 0;
+    } else if (n == 2){
+        return 1;
+    } else {
+        var tempArr = [0,1];
+        for (var i = 2; i <= n; i++ ){
+            tempArr.push(tempArr[i-1] + tempArr[i-2]);
+        }
+        //console.log(tempArr);
+        return tempArr[n-1];
+    }
 
-  if(n <= 0) {
-    hash[0] = 0;
-  } else if(n === 1) {
-    hash[1] = 1;
-  } else {
-    hash[n] = fib(n-1, hash) + fib(n-2, hash);
-  }
-  return hash[n];
 }
 
 
